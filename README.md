@@ -1,7 +1,3 @@
-<<<<<<< 0935e2e77af6d69f2328dfeeb304a2925f2d08c8
-# adaboost
-Adaboostの試作コード
-=======
 # AdaBoost
 機械学習アルゴリズムのひとつであるAdaBoostを実験的にRubyで実装してみた。
 
@@ -31,4 +27,3 @@ Features  [Here!](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr
 1 1.771127779864452 0.6400316433636748
 1 0.3076072954507474 0.47308423467735405
 ~~~
->>>>>>> アカウント移動に伴うfirst commit
