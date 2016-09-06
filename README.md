@@ -20,7 +20,7 @@ $ ruby adaboost.rb
 # 学習で構築した識別器を使って未知データ分類
 $ ruby classification.rb
 ~~~
-※ adaboost.rbを実行すると、識別器パラメータを格納したclassififier.datが生成される。
+※ adaboost.rbを実行すると、識別器パラメータを格納したclassifier.dattが生成される。
 
 ### 学習データファイルのフォーマット
 ~~~csv
