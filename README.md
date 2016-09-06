@@ -9,8 +9,18 @@ Features  [Here!](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr
 
 ## memo
 ### 使用にあたって
-* 簡単な学習データ（低次元、学習データ少数）で、簡単なテストのみ確認
+* 簡単な学習データ（低次元、学習データ少数）でのみ確認
 * 本格的に使用すると学習時間滅茶苦茶かかるので覚悟（マシンパワー必須）
+
+### 実行方法
+~~~
+# 学習による識別器構築
+$ ruby adaboost.rb
+
+# 学習で構築した識別器を使って未知データ分類
+$ ruby classification.rb
+~~~
+※ adaboost.rbを実行すると、識別器パラメータを格納したclassififier.datが生成される。
 
 ### 学習データファイルのフォーマット
 ~~~csv
