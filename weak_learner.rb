@@ -10,18 +10,24 @@ class WeakLearner
   NEGATIVE_LABEL = -1.freeze
   ERROR_THRESHOLD = 0.5
 
-  def initialize(threshold, ref_num, sign = POSITIVE_LABEL)
+  def initialize(threshold, ref_num, sign = POSITIVE_LABEL, weight=1.0)
     @threshold = threshold
     @ref_num = ref_num
     @sign = sign
+    @weight = weight
   end
 
-  # 弱識別器式出力
+  # 弱識別器画面出力
   def print_formula
     puts "--------------------------------------------------------"
     puts "weight    : #{@weight}"
     puts "formula   : #{@sign} * value > #{@sign} * #{@threshold}"
     puts "target element : #{@ref_num}"
+  end
+
+  # 弱識別器パラメータ出力
+  def output_parameters
+    return @threshold, @ref_num, @sign, @weight
   end
 
   # ２クラス識別（値入力）

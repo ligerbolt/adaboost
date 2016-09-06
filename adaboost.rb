@@ -1,6 +1,3 @@
-#######################################
-# Adaboost サンプルプログラム
-#######################################
 #coding utf-8
 require_relative "dataset"
 require_relative "training"
@@ -23,12 +20,12 @@ File::open("datasets.dat") do |file|
 end
 
 # 学習オブジェクト生成
-l_machine = Training.new(datasets)
+train_machine = Training.new(datasets)
 
 # 弱識別器生成数分だけループ処理実行
 WEAK_COUNT.times do |i|
   correct = 0
-  classifier << l_machine.build_classifier
+  classifier << train_machine.build_classifier
 
   # 学習データを識別器にかけ正解率算出
   datasets.each do |data|
@@ -48,3 +45,10 @@ WEAK_COUNT.times do |i|
   end
 end
 
+# 学習構築した識別器出力
+File::open("classifier.dat", "w") do |file|
+  classifier.each do |weak|
+    threshold, ref_num, sign, weight = weak.output_parameters
+    file.puts "#{threshold} #{ref_num} #{sign} #{weight}"
+  end
+end
